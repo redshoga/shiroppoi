@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>白っぽいやつら - 白っぽい文字だけで動くプログラミング言語</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="白っぽい文字で動作するプログラミング言語です。">
+    <meta name="author" content="redshoga">
+    <meta name="keywords" content="白っぽい, Brainfuck">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="./assets/custom.css">
+  </head>
+  <body>
+    <div class="container">
+      <span>プログラミング言語</span>
+      <h1> 白っぽい奴ら</h1>
+      <div class="links">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a href="https://twitter.com/redshoga?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @redshoga</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a class="github-button" href="https://github.com/redshoga" data-size="large" aria-label="Follow @redshoga on GitHub">Follow @redshoga</a>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+      </div>
+      <p>
+        <strong>白っぽい文字で動作するプログラミング言語</strong>です。<a href="https://ja.wikipedia.org/wiki/Brainfuck">Brainf*ck</a>の各命令に使用する文字を置き換えた派生言語です。各命令の対応は以下の通りです。本体は<a href="https://dotinstall.com/lessons/basic_brainfck">ドットインストール Brainf*ck入門</a>とほとんと同じです。<strong>「サンプルをロードする」ボタンを押すと、Hello,world!を出力するプログラムをロードします。</strong>
+      </p>
+      <ol class="two-column">
+        <li>白 : > : increment</li>
+        <li>臼 : < : decrement</li>
+        <li>日 : + : forward</li>
+        <li>曰 : - : back</li>
+        <li>目 : , : input</li>
+        <li>且 : . : output</li>
+        <li>旦 : [ : start loop</li>
+        <li>亘 : ] : end loop</li>
+      </ol>
+
+      <div class="row">
+        <h2>Code</h2>
+        <textarea id="code"></textarea>
+
+        <div>
+          <button id="load">ロード</button>
+          <button id="step">ステップ</button>
+          <button id="run">実行</button>
+          <button id="reset">リセット</button>
+          <button id="sample">サンプルをロード</button>
+        </div>
+
+        <div id="result" class="hidden">
+          <h2>Cleaned Code</h2>
+          <div class="row source" id="ui_code"></div>
+          <h2>Cells</h2>
+          <div class="row source" id="ui_cells"></div>
+          <h2>Output</h2>
+          <div class="row source" id="ui_output"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/app.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-109991117-1');
+    </script>
+  </body>
+</html>
